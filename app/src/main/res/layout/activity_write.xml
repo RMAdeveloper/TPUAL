@@ -7,20 +7,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ual.tp.tp1.LauncherActivity">
+    tools:context="ual.tp.tp1.WriteActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/info_date" />
+        android:id="@+id/input_text"
+        android:layout_centerHorizontal="true" />
 
     <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_write"
-        android:text="@string/action_write"
-        android:layout_below="@+id/info_date"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:id="@+id/button_send"
+        android:text="@string/action_send"
+        android:enabled="false"
+        android:layout_below="@+id/input_text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp" />
 </RelativeLayout>

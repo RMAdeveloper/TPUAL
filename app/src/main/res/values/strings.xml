@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TP1</string>
+
+    //LauncherActivity
+    <string name="action_write">Write new message</string>
+
+    //WriteActivity
+    <string name="action_send">Send it!</string>
 </resources>
