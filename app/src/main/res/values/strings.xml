@@ -6,4 +6,7 @@
 
     //WriteActivity
     <string name="action_send">Send it!</string>
+    <string name="action_attachPhoto">Attach a photo</string>
+
+    //Notification
 </resources>

@@ -9,10 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ual.tp.tp1.WriteActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_photoPreview"
+        android:layout_centerHorizontal="true" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/input_text"
+        android:layout_below="@id/info_photoPreview"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -22,7 +29,16 @@
         android:id="@+id/button_send"
         android:text="@string/action_send"
         android:enabled="false"
-        android:layout_below="@+id/input_text"
+        android:layout_below="@id/input_text"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_attachPhoto"
+        android:text="@string/action_attachPhoto"
+        android:layout_alignTop="@+id/button_send"
+        android:layout_toStartOf="@+id/button_send" />
 </RelativeLayout>
