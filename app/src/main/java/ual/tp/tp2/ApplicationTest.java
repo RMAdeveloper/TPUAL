@@ -1,4 +1,4 @@
-package ual.tp.tp1;
+package ual.tp.tp2;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
