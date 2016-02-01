@@ -15,6 +15,8 @@ public class LauncherActivity extends AppCompatActivity {
      * 3 - Refactor your timer computation in a Service
      */
 
+    static final String COUNT_INC = "count_increment";
+
     TextView dateLabel;
     TextView countLabel;
     Thread timer;
@@ -25,10 +27,15 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
+        if (savedInstanceState != null) {
+            count = savedInstanceState.getLong(COUNT_INC);
+        } else {
+            count = 0;
+        }
+
         dateLabel = (TextView) findViewById(R.id.date);
         countLabel = (TextView) findViewById(R.id.count);
-        count = 0;
-
+        countLabel.setText(count + "");
     }
 
     @Override
@@ -71,5 +78,14 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         timer.interrupt();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putLong(COUNT_INC, count);
+
+        //!!!Call at END!!!
+        super.onSaveInstanceState(outState);
     }
 }
